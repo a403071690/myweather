@@ -1,0 +1,429 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+     >
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    <TextView  
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="输入地名:"
+	         android:layout_marginRight="5dp" 
+	         android:textColor="#FFF"
+	         />
+	     <EditText
+	        android:id="@+id/ed_inputcity"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:ems="10"
+	        android:textColor="#fff"
+	         > 
+	        <requestFocus />
+	    </EditText>
+	
+	    <Button
+	        android:id="@+id/bt_queryweather"
+	        android:layout_width="56dp"
+	        android:layout_height="54dp"
+	        android:background="@drawable/bt_bg2"
+	        android:text="查询"
+	         />
+	</LinearLayout>
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	     <TextView 
+	         android:id="@+id/changyongcity"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="@string/use_city"
+	         android:layout_marginLeft="65dp"
+	         android:layout_marginRight="5dp" 
+	         android:textColor="#FFF"
+	         />
+	
+	    <Button
+	        android:id="@+id/bt_queryweather1"
+	        android:layout_width="56dp"
+	        android:layout_height="23dp"
+	        android:background="@drawable/bt_bg"
+	        android:layout_marginRight="10dp"
+	        android:text="北京"
+	         />
+	    <Button
+	        android:id="@+id/bt_queryweather2"
+	        android:layout_width="56dp"
+	        android:layout_height="23dp"
+	          android:layout_marginRight="10dp"
+	        android:background="@drawable/bt_bg"
+	        android:text="蚌埠"
+	         />
+	    <Button
+	        android:id="@+id/bt_queryweather3"
+	        android:layout_width="56dp"
+	        android:layout_height="23dp"
+	        android:background="@drawable/bt_bg"
+	        android:text="武汉"
+	         />
+	     
+	</LinearLayout>
+	
+	
+	<TextView 
+	    android:id="@+id/tv_city"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="60dp"
+	    android:gravity="center"
+	     android:textColor="#FFF"
+	    android:text=""
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="60dp"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_1"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff"  
+			     android:layout_weight="1"
+			     android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_1"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_1"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+			<TextView
+			  
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+	    
+			<TextView
+			    android:id="@+id/textView1_2"
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="3"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+			<TextView
+			 
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+			
+			
+			<TextView
+			  
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+		
+			<TextView
+			      android:id="@+id/textView2_2"
+			    android:layout_width="0dp" 
+			    android:layout_height="wrap_content"
+			    android:layout_weight="3"
+			    android:text=""
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+			
+			<TextView
+			 
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+		
+			
+			<TextView
+			 
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+			<TextView
+			    android:id="@+id/textView3_2"
+			    android:layout_width="0dp" 
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:layout_weight="3"
+			    android:text=""
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+			
+			<TextView
+			     
+			    android:layout_width="0dp"  
+			    android:layout_height="wrap_content" 
+			    android:text=""
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#fff" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_3"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_3"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_3"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_4"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_4"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_4"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_5"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_5"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_5"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_6"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_6"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_6"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_7"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_7"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_7"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_8"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView2_8"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_8"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    >
+	    
+			<TextView
+			    android:id="@+id/textView1_9"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_marginRight="40dp"
+			    android:layout_height="wrap_content"
+			    android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    />
+			
+			<TextView
+			    android:id="@+id/textView2_9"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_marginRight="40dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+			<TextView
+			    android:id="@+id/textView3_9"
+			    android:layout_width="0dp"
+			    android:gravity="center"
+			    android:layout_marginRight="40dp"
+			    android:layout_height="wrap_content"
+			     android:text="" android:textColor="#fff" android:layout_weight="1"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+	</LinearLayout>
+	
+
+	 
+
+</LinearLayout>

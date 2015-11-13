@@ -1,5 +1,13 @@
 package com.myweather.app.db;
 
+/*
+ * Hi,a403071690
+ * 403071690@qq.com
+ * AppId：55119730f0590d61 
+ * Private_Key：474ec2_SmartWeatherAPI_2ad10e0
+ * http://open.weather.com.cn/data/?areaid=101010100&type=forecast_f&date=201212010741&appid=551197&key=474ec2_SmartWeatherAPI_2ad10e0
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +15,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.myweather.app.model.City;
 import com.myweather.app.model.County;
@@ -16,7 +25,7 @@ public class CoolWeatherDB {
 	/**
 	 * 数据库名称
 	 */
-	public static final String DB_NAME = "cool_weather";
+	public static final String DB_NAME = "cool_weather.db";
 	
 	/**
 	 * 数据库版本
@@ -96,6 +105,38 @@ public class CoolWeatherDB {
 		db.insert("City", null, contentValues);
 		}
 	}
+	
+	/**
+	 * 从数据库里取出某个城市锁对应的code	 */
+	public String loadCityCode(String cityname)
+	{ 
+		String cityCode = "";
+		System.out.println("cityname:"+cityname);
+		try {
+			Cursor cursor = db.query("City", null, "city_name = ?", new String[]{cityname}, null, null, null);
+			if(cursor != null)
+			{  if(cursor.moveToFirst()){
+				cityCode = cursor.getString(cursor.getColumnIndex("city_code"));
+				System.out.println("cityCode1:"+cityCode);
+			  }else{
+				  Log.d("DBUtil.loadCityCode()", "cursor is not null,but not hava code!");
+			  }
+				
+			 }else
+			 {
+				 Log.d("DBUtil.loadCityCode()", "cursor is null!");
+					System.out.println("cityCode2:"+cityCode);
+			 }
+			return cityCode; 
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("exception ");
+		}
+		return "0";
+	}
+	
+	 
+	
 	/**
 	 * 从数据库里取出某个省所有城市信息
 	 */
@@ -114,6 +155,34 @@ public class CoolWeatherDB {
 			} while (cursor.moveToNext());
 		}
 		return list; 
+	}
+	
+
+	/**
+	 * 查看city表有没有数据，或者数据够不够
+	 */
+	public boolean getCountBycity()
+	{
+		boolean b = false;
+		
+		Cursor cursor = db.query("City", null, null, null, null, null, null);
+		if(cursor != null)
+		{
+			if(cursor.getCount()<2000)
+			{
+				b = false; 
+				 
+			}else
+			{
+				b = true; 
+			}
+			
+		}else
+		{
+			b = false; 
+		}
+		return b;
+		 
 	}
 	
 	/**
@@ -146,7 +215,7 @@ public class CoolWeatherDB {
 			} while (cursor.moveToNext());
 		}
 		return list;
-	}
+	} 
 	
 	
 	
